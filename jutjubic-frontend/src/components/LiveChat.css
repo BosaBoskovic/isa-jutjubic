@@ -1,0 +1,86 @@
+.livechat {
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(0,0,0,0.25);
+  margin-top: 14px;
+}
+
+.livechat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.livechat-title {
+  font-weight: 700;
+}
+
+.livechat-status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+.livechat-status.ok { background: rgba(0,200,0,0.18); }
+.livechat-status.bad { background: rgba(200,0,0,0.18); }
+
+.livechat-info {
+  font-size: 14px;
+  opacity: 0.9;
+  padding: 10px 0;
+}
+
+.livechat-messages {
+  height: 260px;
+  overflow: auto;
+  padding-right: 6px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.livechat-msg {
+  margin-bottom: 10px;
+}
+
+.livechat-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.livechat-text {
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+.livechat-input {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.livechat-input input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+  color: white;
+}
+
+.livechat-input button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(30,144,255,0.25);
+  color: white;
+  cursor: pointer;
+}
+.livechat-input button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

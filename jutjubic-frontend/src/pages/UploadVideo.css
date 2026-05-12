@@ -1,0 +1,413 @@
+
+
+.upload-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 2rem;
+
+  background:
+    radial-gradient(900px 450px at 20% 10%, rgba(186, 189, 226, 0.25), transparent 60%),
+    radial-gradient(900px 450px at 80% 0%, rgba(223, 174, 163, 0.18), transparent 60%),
+    linear-gradient(135deg, #1c2346 0%, #2a2f55 45%, #121735 100%);
+}
+
+
+.upload-card {
+  width: 100%;
+  max-width: 860px;
+  padding: 3rem;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(186, 189, 226, 0.35);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+
+  animation: slideUp 0.45s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.upload-card h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 2.25rem;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.upload-card h2::after {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% + 36px);
+  height: 1.55em;
+  border-radius: 999px;
+  z-index: -1;
+
+  background: radial-gradient(
+    closest-side,
+    rgba(223, 174, 163, 0.22),
+    rgba(186, 189, 226, 0.16),
+    transparent 70%
+  );
+  filter: blur(10px);
+}
+
+.upload-subtitle {
+  margin-bottom: 2.1rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+}
+
+
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+
+
+.form-group label {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.upload-card input,
+.upload-card textarea {
+  width: 100%;
+  padding: 0.85em 1em;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.95);
+
+  border: 1.5px solid rgba(186, 189, 226, 0.45);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.upload-card input::placeholder,
+.upload-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.upload-card input:focus,
+.upload-card textarea:focus {
+  outline: none;
+  border-color: rgba(223, 174, 163, 0.8);
+  box-shadow: 0 0 0 4px rgba(223, 174, 163, 0.18);
+  background: rgba(255, 255, 255, 0.10);
+}
+
+
+.tags-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+}
+
+.tag-chip {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(186, 189, 226, 0.55);
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* Scheduled Video Section */
+.scheduled-section {
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(186, 189, 226, 0.35);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1.3rem;
+  height: 1.3rem;
+  cursor: pointer;
+  accent-color: rgba(223, 174, 163, 1);
+}
+
+.scheduled-inputs {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(186, 189, 226, 0.25);
+}
+
+.schedule-hint {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: rgba(223, 174, 163, 0.12);
+  border-left: 3px solid rgba(223, 174, 163, 0.8);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+}
+
+.location-search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.location-search input {
+  padding-right: 1.25rem;
+}
+
+.location-search .btn-secondary-small {
+  white-space: nowrap;
+  padding: 0.7rem 1.1rem;
+}
+
+.location-results {
+  border: 1.5px solid rgba(186, 189, 226, 0.45);
+  border-radius: 14px;
+  background: rgba(15, 19, 45, 0.9);
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.location-result-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+
+  border: none;
+  border-bottom: 1px solid rgba(186, 189, 226, 0.18);
+
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.location-result-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.location-result-item:last-child {
+  border-bottom: none;
+}
+
+
+
+.map-wrap {
+  margin-top: 0.25rem;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.map-wrap,
+.map-wrap .leaflet-container,
+.leaflet-container {
+  flex: 1 1 auto;       
+  height: 100%;     
+  min-height: 0;     
+}
+
+
+.location-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+
+
+
+.btn-secondary-small {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+
+  border: 1.8px solid rgba(186, 189, 226, 0.55);
+  padding: 0.65rem 1.1rem;
+
+  font-weight: 800;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary-small:hover {
+  background: rgba(223, 174, 163, 0.18);
+  border-color: rgba(223, 174, 163, 0.75);
+  transform: translateY(-1px);
+}
+
+
+.upload-card .btn-submit {
+  margin-top: 0.6rem;
+  padding: 1.05rem 1.2rem;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, rgba(55, 67, 117, 1), rgba(137, 81, 89, 0.92));
+  color: #fff;
+
+  font-size: 1.05rem;
+  font-weight: 900;
+
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.upload-card .btn-submit:hover {
+  background: linear-gradient(135deg, rgba(137, 81, 89, 0.98), rgba(55, 67, 117, 0.98));
+}
+
+
+
+.thumb-preview {
+  margin-top: 0.75rem;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1.5px solid rgba(186, 189, 226, 0.55);
+}
+
+.file-info {
+  margin-top: 0.75rem;
+  padding: 0.9rem;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.07);
+  border: 1.5px solid rgba(186, 189, 226, 0.45);
+
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.progress-wrap { margin-top: 0.25rem; }
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+  overflow: hidden;
+  border: 1px solid rgba(186, 189, 226, 0.35);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(223, 174, 163, 1), rgba(186, 189, 226, 1));
+  transition: width 0.25s ease;
+}
+
+.progress-text {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+}
+
+
+
+.submit-error {
+  margin-top: 0.65rem;
+  padding: 1rem;
+  border-radius: 14px;
+
+  background: rgba(211, 47, 47, 0.12);
+  border: 1px solid rgba(211, 47, 47, 0.35);
+  border-left: 5px solid rgba(211, 47, 47, 0.9);
+
+  color: rgba(255, 220, 220, 0.95);
+}
+
+.submit-error ul { margin: 0; }
+
+
+/* Scheduled and Live badges */
+.scheduled-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(186, 189, 226, 0.2);
+  border: 1px solid rgba(186, 189, 226, 0.6);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.live-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+  font-size: 0.9rem;
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(255, 0, 0, 0.6);
+  }
+  50% {
+    border-color: rgba(255, 0, 0, 1);
+  }
+}
+
+.leaflet-container {
+  z-index: 0 !important;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid rgba(186, 189, 226, 0.45);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0 !important;
+}
+
+
+
+@media (max-width: 760px) {
+  .upload-card { padding: 2.1rem 1.5rem; }
+  .form-row-2 { grid-template-columns: 1fr; }
+  .location-search { grid-template-columns: 1fr; }
+}

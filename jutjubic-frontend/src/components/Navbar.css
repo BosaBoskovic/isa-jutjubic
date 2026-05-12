@@ -1,0 +1,87 @@
+.navbar {
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit; 
+}
+
+.navbar-right {
+  margin-left: auto;
+  position: relative;
+}
+
+.hamburger {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 4px 8px;
+}
+
+.hamburger-menu {
+  position: absolute;
+  right: 0;
+  top: 44px;
+
+  background: #ffffff;
+  color: #222;
+
+  border-radius: 10px;
+  padding: 14px;
+  min-width: 190px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.hamburger-menu a {
+  text-decoration: none;
+  color: #1f3a5f; 
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.hamburger-menu a:hover {
+  color: #16324f;
+}
+
+.menu-user {
+  font-size: 14px;
+  color: #2c4f7c;
+  font-weight: 500;
+}
+
+.menu-logout {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.hamburger-menu hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 6px 0;
+}

@@ -1,0 +1,37 @@
+global:
+  scrape_interval: 15s # Prikupljaj metrike svakih 15 sekundi
+  evaluation_interval: 15s
+
+# Alerting configuration (opciono)
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+# Pravila za alertove (opciono)
+rule_files:
+# - "alert_rules.yml"
+
+# Konfiguriši šta da prikuplja
+scrape_configs:
+  # Spring Boot aplikacija
+  - job_name: 'spring-boot-app'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8080']
+        labels:
+          application: 'jutjubic-backend'
+          environment: 'development'
+
+  # PostgreSQL Exporter
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres-exporter:9187']
+        labels:
+          database: 'jutjubic'
+          environment: 'development'
+
+  # Prometheus sam sebe
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
